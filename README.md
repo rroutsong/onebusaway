@@ -1,6 +1,8 @@
 #OneBusAway Wrapper
 
-So far only supports look up by stop id, will finish the remainder.
+Supports all native api calls, with extended variables.
+
+Todo stop & route by address /w geocoder.
 
 #Calls
 
