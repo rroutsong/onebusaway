@@ -19,26 +19,26 @@ class OneBusAway
 		JSON.parse(data)
 	end
 
-	def stopsbylatlong lat,lon
+	def stops_by_latlong lat,lon
 		url		= "#{@api}/stops-for-location.json?key#{@key}&lat=#{lat}&lon=#{lon}"
 		data	= Net::HTTP.get_response(URI.parse(url)).body
 		JSON.parse(data)
 	end
 
-	def routesbylatlon lat,lon
+	def routes_by_latlon lat,lon
 		url		= "#{@api}/routes-for-location.json?key=#{@key}&lat=#{lat}&lon=#{lon}"
 		data	= Net::HTTP.get_response(URI.parse(url)).body
 		JSON.parse(data)
 	end
 
-	def stopsforroute route
+	def stops_for_route route
 		url		= "#{@api}/stops-for-route/#{route}.json?key=#{@key}"
 		data	= Net::HTTP.get_response(URI.parse(url)).body
 		JSON.parse(data)
 	end
 
-	def arvdepforstop route
-		url		= "#{@api}/arrivals-and-departures-for-stop/#{route}.json?key=#{@@key}"
+	def arvdep_for_stop stop
+		url		= "#{@api}/arrivals-and-departures-for-stop/#{stop}.json?key=#{@@key}"
 		data	= Net::HTTP.get_response(URI.parse(url)).body
 		JSON.parse(data)
 	end
