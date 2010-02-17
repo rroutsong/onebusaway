@@ -14,12 +14,14 @@ So far only supports look up by stop id, will finish the remainder.
 
 > **{"text"=>"OK", "data"=>{"route"=>{"id"=>"1_3...**
 
-## *stops_by_latlong(LATITUDE,LONGITUDE)*
+## *stops_by_latlong(LATITUDE,LONGITUDE,QUERY,RADIUS)*
+### Latitude {required}, Longitude {required}, Query {optional}(ROUTE_SHORT_NAME), Radius {optional}(RADIUS_DISTANTCE)
 > onebusaway.stops_by_latlong('47.66839305008159','-122.29036331176758')
 
 > **{"text"=>"OK", "data"=>{"stops"=>{"id"=>"1_100...**
 
-## *routes_by_latlong(LATITUDE,LONGITUDE)*
+## *routes_by_latlong(LATITUDE,LONGITUDE,QUERY,RADIUS)*
+### Latitude {required}, Longitude {required}, Query {optional}(ROUTE_SHORT_NAME), Radius {optional}(RADIUS_DISTANTCE)
 > onebusaway.routes_by_latlong('47.66839305008159','-122.29036331176758')
 
 > **{"text"=>"OK", "data"=>{"route"=>{"id"=>"1_100...**
