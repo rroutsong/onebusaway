@@ -2,9 +2,9 @@ require 'net/http'
 require 'json'
 
 class OneBusAway
-	def initialize key
+	def initialize key, base_url = 'http://api.onebusaway.org/api/where'
 		@key = key
-		@api = 'http://api.onebusaway.org/api/where'
+		@api = base_url
 	end
 
 	def stop_by_id id
